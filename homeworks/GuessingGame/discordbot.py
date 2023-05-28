@@ -28,6 +28,8 @@ async def guess(ctx):
                 await ctx.send(f"Lower!")
             if guess.content <= str(number):
                 await ctx.send(f"Higher!")
+            if guess.content>100 or guess.content<1:
+                await ctx.send(f"My number is ranged between 1 and 100! \nPlease enter a number in that range.")
         except:
             await ctx.send("Enter a number!")
             i-=1
